@@ -2,6 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+<distributionManagement>
+
+<repository>
+  <id>test-artifactory</id>
+  <url>https://pkgs.dev.azure.com/VARUN575/TestDevops/_packaging/test-artifactory/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
+
+</distributionManagement>
+	
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.microsoft</groupId>
 	<artifactId>ROOT</artifactId>
