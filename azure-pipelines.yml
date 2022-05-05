@@ -17,7 +17,7 @@ steps:
     artifactsFeeds: 'test-artifactory'
 - task: Maven@3
   inputs:
-    mavenPomFile: 'Application\pom.xml'
+    mavenPomFile: 'Application/pom.xml'
     mavenOptions: '-Xmx3072m -Dmaven.test.skip=true'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
