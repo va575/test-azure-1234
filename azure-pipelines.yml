@@ -10,11 +10,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-
 steps:
-- task: MavenAuthenticate@0
-  inputs:
-    artifactsFeeds: 'test-artifactory'
 - task: Maven@3
   inputs:
     mavenPomFile: 'Application/pom.xml'
@@ -22,5 +18,6 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
-    goals: 'clean install'
-    vstsMavenAccessToken: 6aehs7zl2f4ew2osm7jdx6y3yuykmvtaeg7d4x742m3h3hcgrpmq
+    goals: 'clean install deploy'
+    mavenAuthenticateFeed: true
+    
